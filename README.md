@@ -144,3 +144,4 @@ If you find this bootloader configuration useful, consider giving it a star to m
 - The guys from [Acidanthera](https://github.com/acidanthera) that make this possible
   
 - [Sukka](https://github.com/SukkaW) From his [blog](https://blog.skk.moe/post/ssdt-map-fn-shortcuts/) I learned how to remap function keys
+- [ic005k](https://github.com/ic005k) For his wonderful tools [OCAT](https://github.com/ic005k/QtOpenCoreConfig) (plist editing) and [QtiASL](https://github.com/ic005k/QtiASL) (.aml/.dsl file [de]compiling and editing)
