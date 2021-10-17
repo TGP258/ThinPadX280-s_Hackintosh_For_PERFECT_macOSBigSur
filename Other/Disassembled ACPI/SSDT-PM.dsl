@@ -1,35 +1,34 @@
-//
-// Fix power-management
-//
-// Many setups disable the PPMC-device and force the PMCR-device to be `Name (_HID, EisaId ("APP9876"))`,
-// because they saw something similar at @acidanthera's ACPI-samples.
-//
-// That's entirely wrong as it is intended to fix NVRAM-access on series 300-mainboards as clearly stated in
-// the comment in the file. This breaks the PMC as it disables the real PCI-PMC-controller (PPMC) on x80-thinkpads!
-//
-// This fixes the actually available PPMC-device to be as closely compatible to the ACPI-setup on
-// the macbookpro14,1.
-//
-//
-DefinitionBlock ("", "SSDT", 2, "T480", "PM", 0x00001000)
+/*
+ * Intel ACPI Component Architecture
+ * AML/ASL+ Disassembler version 20210331 (64-bit version)
+ * Copyright (c) 2000 - 2021 Intel Corporation
+ * 
+ * Disassembling to symbolic ASL+ operators
+ *
+ * Disassembly of /Users/aimai.who/Desktop/acpi/SSDT-PM.aml, Sun Oct 17 11:37:07 2021
+ *
+ * Original Table Header:
+ *     Signature        "SSDT"
+ *     Length           0x000000B2 (178)
+ *     Revision         0x02
+ *     Checksum         0x38
+ *     OEM ID           "X280"
+ *     OEM Table ID     "PM"
+ *     OEM Revision     0x00001000 (4096)
+ *     Compiler ID      "INTL"
+ *     Compiler Version 0x20210331 (539034417)
+ */
+DefinitionBlock ("", "SSDT", 2, "X280", "PM", 0x00001000)
 {
-    // External method from SSDT-UTILS.dsl
-    External (OSDW, MethodObj) // 0 Arguments
-    External (DTGP, MethodObj) // 5 Arguments
+    External (_PR_.PR00, ProcessorObj)
+    External (_SB_.PCI0, DeviceObj)
+    External (DTGP, MethodObj)    // 5 Arguments
+    External (OSDW, MethodObj)    // 0 Arguments
 
-    External (_PR.PR00, ProcessorObj)
-
-    //
-    // XCPM power management compatibility table.
-    // Makes X86PlatformPlugin load.
-    //
     Scope (\_PR.PR00)
     {
-        Method (_DSM, 4, NotSerialized)
+        Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
         {
-            //
-            // Inject plugin-type = 0x01 to load X86*.kext
-            //
             Local0 = Package (0x02)
                 {
                     "plugin-type", 
@@ -40,20 +39,12 @@ DefinitionBlock ("", "SSDT", 2, "T480", "PM", 0x00001000)
         }
     }
 
-    // Fix PM-Controller
-    External (_SB.PCI0, DeviceObj) // 0 Arguments
-
     Scope (\_SB.PCI0)
     {
-        //
-        // Same device present on macbook14,1 according to:
-        // https://github.com/khronokernel/DarwinDumped/blob/b6d91cf4a5bdf1d4860add87cf6464839b92d5bb/MacBookPro/MacBookPro14%2C1/ACPI%20Tables/DSL/DSDT.dsl#L6120
-        //
         Device (PMCR)
         {
             Name (_ADR, 0x001F0002)  // _ADR: Address
-
-            Method (_STA, 0, NotSerialized)
+            Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (OSDW ())
                 {
@@ -65,4 +56,4 @@ DefinitionBlock ("", "SSDT", 2, "T480", "PM", 0x00001000)
         }
     }
 }
-// EOF
+
