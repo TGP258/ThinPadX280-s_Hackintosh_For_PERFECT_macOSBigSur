@@ -2,7 +2,7 @@
 
 <img align="right" src="./Other/README_Resources/ThinkPad.gif" alt="T480 macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.5-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS](https://img.shields.io/badge/macOS-11.6-brightgreen.svg)](https://www.apple.com/macos/big-sur)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.6-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS](https://img.shields.io/badge/macOS-11.6-brightgreen.svg)](https://www.apple.com/macos/big-sur)
 
 **DISCLAIMER:**
 Read the entire README and Dortania guides before you start. I am not responsible for any damage.
@@ -33,46 +33,45 @@ If you find this bootloader configuration useful, consider giving it a star to m
 <summary><strong>Main software</strong></summary>
 <br>
 
-| Component      | Version        |
-| -------------- | -------------- |
-| macOS Big Sur  | 11.6 (20G165)  |
-| OpenCore       | v0.7.5         |
+| Component     | Version         |
+| ------------- | --------------- |
+| macOS Big Sur | 11.6.1 (20G224) |
+| OpenCore      | v0.7.6          |
 
 </details>
 
 <details>
-
 <summary><strong>Kernel extensions</strong></summary>
 <br>
 
-| Kext                  | Version         |
-| :-------------------- | --------------- |
-| AppleALC              | 1.6.5           |
-| BrcmPatchRam          | 2.6.0           |
-| BrcmBluetoothInjector | 2.6.0           |
-| BrcmFirmwareData      | 2.6.0           |
-| BrcmPatchRAM3         | 2.6.0           |
-| BrightnessKeys        | 1.0.2           |
-| CPUFriend             | 1.2.4           |
-| CPUFriendDataProvider | i5-8250U        |
-| HibernationFixup      | 1.4.4           |
-| HoRNDIS               | 9.2             |
-| IntelMausi            | 1.0.7           |
-| Lilu                  | 1.5.6           |
-| NoTouchID             | 1.0.4           |
-| NVMeFix               | 1.0.9           |
-| RTCMemoryFixup        | 1.0.8           |
-| SMCBatteryManager     | 1.2.7           |
-| SMCProcessor          | 1.2.7           |
-| SMCSuperIO            | 1.2.7           |
-| USBInjectAll          | Disabled, 0.7.6 |
-| USBPorts              | Handmade        |
-| VirtualSMC            | 1.2.7           |
-| VoltageShift          | Disabled, 1.21  |
-| VoodooPS2Controller   | 2.2.6           |
-| VoodooRMI             | 1.3.4           |
-| VoodooSMBus           | 3.0.0           |
-| WhateverGreen         | 1.5.4           |
+| Kext                  |
+| :-------------------- |
+| AppleALC              |
+| BrcmPatchRam          |
+| BrcmBluetoothInjector |
+| BrcmFirmwareData      |
+| BrcmPatchRAM3         |
+| BrightnessKeys        |
+| CPUFriend             |
+| CPUFriendDataProvider |
+| HibernationFixup      |
+| HoRNDIS               |
+| IntelMausi            |
+| Lilu                  |
+| NoTouchID             |
+| NVMeFix               |
+| RTCMemoryFixup        |
+| SMCBatteryManager     |
+| SMCProcessor          |
+| SMCSuperIO            |
+| USBInjectAll          |
+| USBPorts              |
+| VirtualSMC            |
+| VoltageShift          |
+| VoodooPS2Controller   |
+| VoodooRMI             |
+| VoodooSMBus           |
+| WhateverGreen         |
 
 </details>
 <details>
