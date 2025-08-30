@@ -138,7 +138,7 @@ If you find this bootloader configuration useful, consider giving it a star to m
 
 ## CREDITS
 - [itlwm](https://github.com/OpenIntelWireless/itlwm) For Intel Wi-Fi Drivers for macOS
-- 
+  
 - [EETagent](https://github.com/EETagent) For orginal T480 OpenCore repo
 
 - The guys from [Acidanthera](https://github.com/acidanthera) that make this possible
