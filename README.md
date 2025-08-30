@@ -15,6 +15,8 @@ If you find this bootloader configuration useful, consider giving it a star to m
 <summary><strong>Hardware</strong></summary>
 <br>
 
+This is the native version from aimai-who.
+
 [![UEFI](https://img.shields.io/badge/UEFI-N20ET58W(1.43)-lightgrey)]
 
 | Category  | Component                                                          | Note |
