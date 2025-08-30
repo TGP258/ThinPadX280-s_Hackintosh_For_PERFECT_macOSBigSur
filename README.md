@@ -8,14 +8,15 @@
 Read the entire README and Dortania guides before you start. I am not responsible for any damage.
 When you encounter bug or want to improve this repo, consider opening issue or pull request. But I'm not so powerful to solve them all.
 If you find this bootloader configuration useful, consider giving it a star to make it more visible.
-
+## This is the native version from aimai-who.
+Please Change To [myVersion](https://github.com/TGP258/ThinPadX280-s_Hackintosh_For_PERFECT_macOSBigSur/tree/Built-in_Intel_adapter) To Use The Intel Adapter！！
 ## Introduction
 <details>
 
 <summary><strong>Hardware</strong></summary>
 <br>
 
-This is the native version from aimai-who.
+
 
 [![UEFI](https://img.shields.io/badge/UEFI-N20ET58W(1.43)-lightgrey)]
 
