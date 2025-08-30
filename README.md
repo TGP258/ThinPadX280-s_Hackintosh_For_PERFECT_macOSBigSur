@@ -23,7 +23,7 @@ If you find this bootloader configuration useful, consider giving it a star to m
 | GPU         | Intel UHD 620                                                       | |
 | SSD          | SAMSUNG MZNLN256HAJQ-000L7 256GB      | |
 | Memory  | 4GB * 2 DDR4 2400Mhz                                      | |
-| Wifi & BT | Intel Wireless-AC 8265                                        | replaced by DW1820A with some pins masked |
+| Wifi & BT | Intel Wireless-AC 8265                                        | I did not replace it with DW1820A. |
 | Input  | PS2 Keyboard & Synaptics TrackPad | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2) and some handmade key remapping |
 
 </details>  
@@ -33,10 +33,10 @@ If you find this bootloader configuration useful, consider giving it a star to m
 <summary><strong>Main software</strong></summary>
 <br>
 
-| Component     | Version         |
-| ------------- | --------------- |
-| macOS Big Sur | 11.6.1 (20G224) |
-| OpenCore      | v0.7.6          |
+| Component     | Version           |
+| ------------- | ----------------  |
+| macOS Big Sur | 11.7.10 (20G1427) |
+| OpenCore      | v0.7.8            |
 
 </details>
 
@@ -47,10 +47,10 @@ If you find this bootloader configuration useful, consider giving it a star to m
 | Kext                  |
 | :-------------------- |
 | AppleALC              |
-| BrcmPatchRam          |
-| BrcmBluetoothInjector |
-| BrcmFirmwareData      |
-| BrcmPatchRAM3         |
+| AirportItlwm_BigSur   |
+| IntelBluetoothInjector|
+| IntelBluetoothFirmware|
+| IntelBTPatcher        |
 | BrightnessKeys        |
 | CPUFriend             |
 | CPUFriendDataProvider |
@@ -96,7 +96,7 @@ If you find this bootloader configuration useful, consider giving it a star to m
 
 - [x] Battery percentage
 
-- [x] Bluetooth `DW1820A`
+- [x] Bluetooth `AC8265`
 
 - [x] Boot chime
 
@@ -132,12 +132,13 @@ If you find this bootloader configuration useful, consider giving it a star to m
 
 - [x] Web camera
 
-- [x] Wifi `DW1820A`
+- [x] Wifi `AC8265`
 
 </details>  
 
 ## CREDITS
-
+- [itlwm](https://github.com/OpenIntelWireless/itlwm) For Intel Wi-Fi Drivers for macOS
+- 
 - [EETagent](https://github.com/EETagent) For orginal T480 OpenCore repo
 
 - The guys from [Acidanthera](https://github.com/acidanthera) that make this possible
